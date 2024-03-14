@@ -1,0 +1,37 @@
+import React, { lazy, Suspense } from 'react';
+import { useRoutes } from 'react-router-dom';
+
+function App () {
+  const Main = lazy(() => {return import('./views/Main')});
+  const Login = lazy(() => {return import('./views/Login')});
+  const routes = useRoutes([
+    {
+      path:'/',
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Main/>
+        </Suspense>
+      ),
+    },
+    {
+      path:'/login',
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Login/>
+        </Suspense>
+      ),
+    },
+    // {
+    //   path:'/',
+    //   element: <Navigate to="/about"/>
+    // },
+  ]);
+
+  return (
+    <>
+      {routes}
+    </>
+  )
+}
+
+export default App;
