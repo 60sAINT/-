@@ -567,6 +567,10 @@ video {
   top: 2.5rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .mix-blend-soft-light {
   mix-blend-mode: soft-light;
 }

@@ -22,10 +22,6 @@ function App () {
         </Suspense>
       ),
     },
-    // {
-    //   path:'/',
-    //   element: <Navigate to="/about"/>
-    // },
   ]);
 
   return (
