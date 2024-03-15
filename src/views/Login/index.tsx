@@ -1,10 +1,11 @@
 import React from 'react';
+import LoginBackground from './LoginBackground';
 
 function Login() {
   return (
-    <div className="Login">
-      <span>登录页面</span>
-    </div>
+    <>
+      <LoginBackground/>
+    </>
   );
 }
 

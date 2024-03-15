@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
+import './styles/output.css';
 
 function App () {
   const Main = lazy(() => {return import('./views/Main')});
