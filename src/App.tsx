@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 import './styles/output.css';
+import './styles/index.less';
 
 function App () {
   const Main = lazy(() => {return import('./views/Main')});
