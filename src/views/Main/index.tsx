@@ -79,6 +79,10 @@ const Main = ({changeCurrentMenuKey, currentMenuKey}:any) => {
     },
   ];
   const changeMenuKey: MenuProps['onClick'] = (e) => {
+    console.log(currentMenuKey)
+    if(e.key == 'attachmentUpload') {
+      return;
+    }
     changeCurrentMenuKey(e.key);
   }
 
@@ -94,7 +98,7 @@ const Main = ({changeCurrentMenuKey, currentMenuKey}:any) => {
         },
       }}
     >
-      <Layout>
+      <Layout style={{background: 'linear-gradient(180deg, #ffe7ea, #fff5f7 50%, #fff)', height: '2500px'}}>
         <Header
           style={{
             position: 'sticky',
@@ -121,12 +125,11 @@ const Main = ({changeCurrentMenuKey, currentMenuKey}:any) => {
             onClick={changeMenuKey}
           />
         </Header>
-        <Content style={{ padding: '0 48px' }}>
+        <Content style={{width: '80%'}}>
           {/* {
             currentMenuKey == 'home' ?
             <Home/> : currentMenuKey == 'parsingResume' ?
-            <ParsingResume/> : currentMenuKey == 'onlineEdit' ?
-            <OnlineEdit/> : <AttachmentUpload/>
+            <ParsingResume/> : <OnlineEdit/>
           } */}
           <OnlineEdit/>
         </Content>
